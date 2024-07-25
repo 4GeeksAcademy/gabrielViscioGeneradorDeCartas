@@ -1,40 +1,40 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function generateRandomCard() {
+  let suits = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
+  let values = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  let randomSuit = suits[Math.floor(Math.random() * suits.length)];
+  let randomValue = values[Math.floor(Math.random() * values.length)];
 
-window.onload = function() {
-  function generateRandomCard() {
-    let suits = ["spade", "club", "heart", "diamond"];
-    let values = [
-      "A",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "J",
-      "Q",
-      "K"
-    ];
+  document.getElementById("suitTop").innerHTML = randomSuit;
+  document.getElementById("value").innerHTML = randomValue;
+  document.getElementById("suitBottom").innerHTML = randomSuit;
 
-    let randomSuit = suits[Math.floor(Math.random() * suits.length)];
-    let randomValue = values[Math.floor(Math.random() * values.length)];
+  // Añade clases para los colores
+  let suitTop = document.getElementById("suitTop");
+  let suitBottom = document.getElementById("suitBottom");
+  suitTop.className = suitBottom.className = "";
 
-    let card = document.getElementById("card");
-    card.className = "card " + randomSuit;
-    card.innerHTML = randomValue;
-
-    console.log("generateRandomCard");
+  if (randomSuit === "&hearts;" || randomSuit === "&diams;") {
+    suitTop.classList.add("heart");
+    suitBottom.classList.add("heart");
+  } else {
+    suitTop.classList.add("spade");
+    suitBottom.classList.add("spade");
   }
+}
 
-  generateRandomCard();
-
-  window.generateRandomCard = generateRandomCard;
-};
+window.onload = generateRandomCard;
