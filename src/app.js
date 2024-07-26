@@ -1,5 +1,5 @@
 function generateRandomCard() {
-  let suits = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
+  let suits = ["&spades;", "&clubs;", "♥", "♦"];
   let values = [
     "A",
     "2",
@@ -28,7 +28,7 @@ function generateRandomCard() {
   let suitBottom = document.getElementById("suitBottom");
   suitTop.className = suitBottom.className = "";
 
-  if (randomSuit === "&hearts;" || randomSuit === "&diams;") {
+  if (randomSuit === "♥" || randomSuit === "♦") {
     suitTop.classList.add("heart");
     suitBottom.classList.add("heart");
   } else {
