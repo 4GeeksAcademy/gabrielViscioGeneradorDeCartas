@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link href="/src/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -20,9 +20,13 @@
           style="width: 150px; height: 250px;"
         >
           <div class="card-body d-flex flex-column justify-content-between">
-            <div id="suitTop" class="align-self-start"></div>
+            <div class="container color ">
+              <div id="suitTop" class="align-self-start text-start"></div>
+            </div>
             <div id="value" class="display-4"></div>
-            <div id="suitBottom" class="display-4"></div>
+            <div class="container color">
+              <div id="suitBottom" class="align-self-end"></div>
+            </div>
           </div>
         </div>
         <button onclick="generateRandomCard()" class="btn btn-primary m-auto">
@@ -30,6 +34,6 @@
         </button>
       </div>
     </div>
-    <script src="./app.js"></script>
+    <script src="/src/app.js"></script>
   </body>
 </html>

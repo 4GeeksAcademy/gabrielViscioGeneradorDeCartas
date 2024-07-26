@@ -1,7 +1,22 @@
 /* Añade clases para los colores */
 .heart {
   color: red;
+  font-size: 2em;
 }
 .spade {
   color: black;
+  font-size: 2em;
+}
+#suitBottom{
+  transform: rotate(180deg)
+}
+#suitTop {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#suitBottom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }

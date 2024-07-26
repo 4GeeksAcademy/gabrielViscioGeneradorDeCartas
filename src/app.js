@@ -37,4 +37,7 @@ function generateRandomCard() {
   }
 }
 
-window.onload = generateRandomCard;
+window.onload = function() {
+  generateRandomCard();
+  setInterval(generateRandomCard, 10000);
+};
