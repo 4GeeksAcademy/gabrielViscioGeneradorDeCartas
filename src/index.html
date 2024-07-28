@@ -28,7 +28,29 @@
             </div>
           </div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-4">
+          <form id="resizeForm">
+            <div class="mb-3">
+              <label for="height" class="form-label">Nueva altura</label>
+              <input
+                type="number"
+                class="form-control"
+                id="heightInput"
+                aria-describedby="Cola altura de carta"
+              />
+              <div id="heightHelp" class="form-text">
+                Coloca valores de 100 hasta 500
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="resizeCard()"
+            >
+              Aplicar Cambios
+            </button>
+          </form>
+        </div>
       </div>
       <div class="row">
         <div class="col-4"></div>
@@ -37,11 +59,7 @@
             Nueva Carta
           </button>
         </div>
-        <div class="col-4">
-          <button onclick="generateRandomCard()" class="btn  btn-light m-auto">
-            Aplicar Cambios
-          </button>
-        </div>
+        <div class="col-4"></div>
       </div>
     </div>
     <script src="/src/app.js"></script>

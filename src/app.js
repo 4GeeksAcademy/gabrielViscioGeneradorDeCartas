@@ -37,6 +37,18 @@ function generateRandomCard() {
   }
 }
 
+// Función para cambiar el tamaño de la carta
+function resizeCard() {
+  let height = document.getElementById("heightInput").value;
+  if (height >= 100 && height <= 500) {
+    let card = document.getElementById("card");
+    card.style.height = height + "px";
+    card.style.width = height / 1.67 + "px"; // Mantiene la proporción 3:5
+  } else {
+    alert("Por favor, introduce un valor entre 100 y 500.");
+  }
+}
+
 window.onload = function() {
   generateRandomCard();
   setInterval(generateRandomCard, 10000);
